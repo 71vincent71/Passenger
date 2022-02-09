@@ -11,6 +11,7 @@ public class Passenger
     public Passenger(String Title, String Name, String ID, String Phone, int Age)
     {
         setTitle(Title);
+        setName(Name);
     }
 
     private void setTitle(String Title)
@@ -27,5 +28,21 @@ public class Passenger
     public String getTitle()
     {
         return Title;
+    }
+
+    private void setName(String Name)
+    {
+        if(Name.length() > 2)
+        {
+            this.Name = Name;
+        }
+        else
+        {
+            throw new IllegalArgumentException("Inavlid Name");
+        }
+    }
+    public String getName()
+    {
+        return Name;
     }
 }
