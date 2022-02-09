@@ -25,7 +25,7 @@ public class Passenger
         }
         else
         {
-            throw new IllegalArgumentException("Inavlid Title");
+            throw new IllegalArgumentException("Invalid Title");
         }
     }
     public String getTitle()
@@ -41,7 +41,7 @@ public class Passenger
         }
         else
         {
-            throw new IllegalArgumentException("Inavlid Name");
+            throw new IllegalArgumentException("Invalid Name");
         }
     }
     public String getName()
@@ -57,7 +57,7 @@ public class Passenger
         }
         else
         {
-            throw new IllegalArgumentException("Inavlid ID");
+            throw new IllegalArgumentException("Invalid ID");
         }
     }
 
@@ -74,7 +74,7 @@ public class Passenger
         }
         else
         {
-            throw new IllegalArgumentException("Inavlid Phone");
+            throw new IllegalArgumentException("Invalid Phone");
         }
     }
 
@@ -91,7 +91,7 @@ public class Passenger
         }
         else
         {
-            throw new IllegalArgumentException("Inavlid Age");
+            throw new IllegalArgumentException("Invalid Age");
         }
     }
 
