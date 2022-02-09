@@ -14,6 +14,7 @@ public class Passenger
         setName(Name);
         setID(ID);
         setPhone(Phone);
+        setAge(Age);
     }
 
     private void setTitle(String Title)
@@ -80,5 +81,22 @@ public class Passenger
     public String getPhone()
     {
         return Phone;
+    }
+
+    private void setAge(int Age)
+    {
+        if(Age > 16)
+        {
+            this.Age = Age;
+        }
+        else
+        {
+            throw new IllegalArgumentException("Inavlid Age");
+        }
+    }
+
+    public int getAge()
+    {
+        return Age;
     }
 }
