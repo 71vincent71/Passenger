@@ -5,7 +5,7 @@ public class Passenger
     private String Title;
     private String Name;
     private String ID;
-    private long Phone;
+    private String Phone;
     private int Age;
 
     public Passenger(String Title, String Name, String ID, String Phone, int Age)
@@ -13,6 +13,7 @@ public class Passenger
         setTitle(Title);
         setName(Name);
         setID(ID);
+        setPhone(Phone);
     }
 
     private void setTitle(String Title)
@@ -62,5 +63,22 @@ public class Passenger
     public String getID()
     {
         return ID;
+    }
+
+    private void setPhone(String Phone)
+    {
+        if(Phone.length() > 6)
+        {
+            this.Phone = Phone;
+        }
+        else
+        {
+            throw new IllegalArgumentException("Inavlid Phone");
+        }
+    }
+
+    public String getPhone()
+    {
+        return Phone;
     }
 }
