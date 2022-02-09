@@ -37,4 +37,19 @@ public class PassengerTest
         Exception exceptionThrown = assertThrows(IllegalArgumentException.class, ()-> new Passenger("Mr", "Ty", "1234567890", "09876543", 25));
         assertEquals(invalid, exceptionThrown.getMessage());
     }
+
+    @Test
+    void testConstructorID()
+    {
+        myPass = new Passenger("Mr", "Conor", "1234567890", "09876543", 25);
+        assertEquals("1234567890", myPass.getID());
+    }
+
+    @Test
+    void testConstructorInvalidID()
+    {
+        final String invalid = "Invalid ID";
+        Exception exceptionThrown = assertThrows(IllegalArgumentException.class, ()-> new Passenger("Mr", "Conor", "123", "09876543", 25));
+        assertEquals(invalid, exceptionThrown.getMessage());
+    }
 }

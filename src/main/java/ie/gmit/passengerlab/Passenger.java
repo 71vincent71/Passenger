@@ -12,6 +12,7 @@ public class Passenger
     {
         setTitle(Title);
         setName(Name);
+        setID(ID);
     }
 
     private void setTitle(String Title)
@@ -44,5 +45,22 @@ public class Passenger
     public String getName()
     {
         return Name;
+    }
+
+    private void setID(String ID)
+    {
+        if(ID.length() > 9)
+        {
+            this.ID = ID;
+        }
+        else
+        {
+            throw new IllegalArgumentException("Inavlid ID");
+        }
+    }
+
+    public String getID()
+    {
+        return ID;
     }
 }
